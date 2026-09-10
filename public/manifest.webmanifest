@@ -1,0 +1,43 @@
+{
+  "name": "أثير | Atheer Social (Android Pro)",
+  "short_name": "أثير",
+  "description": "تطبيق التواصل الاجتماعي المشفر والأسرع للأندرويد - خصوصية تامة بدون تتبع وميزات برو مفتوحة بالكامل",
+  "start_url": "/",
+  "id": "/",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#0c0f14",
+  "theme_color": "#0c0f14",
+  "icons": [
+    {
+      "src": "/icon-192.svg",
+      "sizes": "192x192",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/icon-512.svg",
+      "sizes": "512x512",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ],
+  "categories": ["social", "security", "privacy"],
+  "screenshots": [],
+  "shortcuts": [
+    {
+      "name": "الرسائل المشفرة",
+      "short_name": "الرسائل",
+      "description": "فتح المحادثات المشفرة مباشرة",
+      "url": "/?tab=messages",
+      "icons": [{ "src": "/icon-192.svg", "sizes": "192x192" }]
+    },
+    {
+      "name": "درع الخصوصية",
+      "short_name": "الدرع",
+      "description": "فحص مستوى التشفير وحظر المتتبعات",
+      "url": "/?tab=privacy",
+      "icons": [{ "src": "/icon-192.svg", "sizes": "192x192" }]
+    }
+  ]
+}

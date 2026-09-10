@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 192 192" width="192" height="192">
+  <defs>
+    <linearGradient id="bgGrad192" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0c0f14"/>
+      <stop offset="100%" stop-color="#05070a"/>
+    </linearGradient>
+    <linearGradient id="shieldGrad192" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#10b981"/>
+      <stop offset="100%" stop-color="#0891b2"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="192" height="192" rx="48" fill="url(#bgGrad192)"/>
+  <rect width="188" height="188" x="2" y="2" rx="46" fill="none" stroke="#10b981" stroke-width="2" stroke-opacity="0.3"/>
+
+  <!-- Center Shield -->
+  <path d="M96 34 L142 56 V100 C142 130 122 154 96 162 C70 154 50 130 50 100 V56 Z" 
+        fill="url(#shieldGrad192)"/>
+
+  <path d="M96 46 L132 64 V98 C132 122 116 142 96 149 C76 142 60 122 60 98 V64 Z" 
+        fill="#0a0d12"/>
+
+  <!-- Arabic Calligraphic Letter 'Atheer' Alif -->
+  <text x="96" y="114" 
+        font-family="Cairo, Arial, sans-serif" 
+        font-weight="900" 
+        font-size="62" 
+        fill="#10b981" 
+        text-anchor="middle">أ</text>
+
+  <circle cx="128" cy="65" r="5" fill="#38bdf8"/>
+</svg>

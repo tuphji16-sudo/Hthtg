@@ -1,0 +1,6 @@
+{
+  "name": "أثير | Atheer Social",
+  "description": "تطبيق أندرويد للتواصل الاجتماعي المشفر مع جميع الميزات المفتوحة والسرعة الفائقة والخصوصية التامة.",
+  "requestFramePermissions": ["camera", "microphone"],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
