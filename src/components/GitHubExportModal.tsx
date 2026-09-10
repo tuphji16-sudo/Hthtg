@@ -21,7 +21,7 @@ export const GitHubExportModal: React.FC<GitHubExportModalProps> = ({
   isOpen,
   onClose,
 }) => {
-  const [repoUrl, setRepoUrl] = useState('https://github.com/USERNAME/atheer-social.git');
+  const [repoUrl, setRepoUrl] = useState('https://github.com/tuphji/Hthtg.git');
   const [copied, setCopied] = useState(false);
 
   if (!isOpen) return null;
@@ -126,24 +126,24 @@ git push -u origin main`;
         </div>
 
         {/* Option 3: Download Complete Repository Archive */}
-        <div className="pt-1 flex items-center justify-between gap-2 border-t border-neutral-800">
+        <div className="pt-1 flex flex-col sm:flex-row items-center gap-2 border-t border-neutral-800">
           <a
-            href="/atheer-social-source.tar.gz"
-            download="atheer-social-source.tar.gz"
-            className="flex-1 py-2.5 px-3 rounded-xl bg-neutral-900 hover:bg-neutral-800 border border-neutral-700 text-neutral-200 text-xs font-bold flex items-center justify-center gap-2 transition-colors cursor-pointer text-center"
+            href="/atheer-social.zip"
+            download="atheer-social.zip"
+            className="w-full sm:flex-1 py-2.5 px-3 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-black text-xs font-bold flex items-center justify-center gap-2 transition-colors cursor-pointer text-center shadow-lg shadow-emerald-950"
           >
-            <Download className="w-4 h-4 text-emerald-400" />
-            <span>تنزيل أرشيف المشروع كاملاً (.tar.gz)</span>
+            <Download className="w-4 h-4 text-black" />
+            <span>تنزيل ملف المشروع (.ZIP) للهاتف</span>
           </a>
 
           <a
-            href="https://github.com/new"
+            href="https://github.com/tuphji/Hthtg"
             target="_blank"
             rel="noreferrer"
-            className="py-2.5 px-4 rounded-xl bg-[#24292e] hover:bg-[#2f363d] border border-neutral-600 text-white text-xs font-bold flex items-center gap-1.5 transition-colors cursor-pointer"
+            className="w-full sm:w-auto py-2.5 px-4 rounded-xl bg-[#24292e] hover:bg-[#2f363d] border border-neutral-600 text-white text-xs font-bold flex items-center justify-center gap-1.5 transition-colors cursor-pointer"
           >
-            <span>إنشاء مستودع</span>
-            <ArrowUpRight className="w-3.5 h-3.5" />
+            <span>فتح مستودع Hthtg</span>
+            <ArrowUpRight className="w-3.5 h-3.5 text-emerald-400" />
           </a>
         </div>
 
