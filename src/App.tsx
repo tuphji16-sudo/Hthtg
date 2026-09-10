@@ -21,6 +21,7 @@ import { AtheerProModal } from './components/AtheerProModal';
 import { AndroidAPKModal } from './components/AndroidAPKModal';
 import { AndroidPermissionsModal } from './components/AndroidPermissionsModal';
 import { BiometricLockScreen } from './components/BiometricLockScreen';
+import { GitHubExportModal } from './components/GitHubExportModal';
 import { 
   ShieldCheck, 
   Zap, 
@@ -77,6 +78,7 @@ export default function App() {
   const [isAPKModalOpen, setIsAPKModalOpen] = useState(false);
   const [isPermissionsModalOpen, setIsPermissionsModalOpen] = useState(false);
   const [isBiometricLocked, setIsBiometricLocked] = useState(false);
+  const [isGitHubModalOpen, setIsGitHubModalOpen] = useState(false);
 
   // Android Pro Features (All Unlocked)
   const [androidPro, setAndroidPro] = useState<AndroidProFeatures>(() => {
@@ -395,6 +397,7 @@ export default function App() {
       onLockScreen={() => setIsBiometricLocked(true)}
       onOpenProModal={() => setIsProModalOpen(true)}
       onOpenAPKModal={() => setIsAPKModalOpen(true)}
+      onOpenGitHubModal={() => setIsGitHubModalOpen(true)}
       quantumEnabled={androidPro.quantumEncryptionEnabled}
     >
       <div className="min-h-screen bg-[#0c0f14] text-neutral-100 flex flex-col font-sans selection:bg-emerald-500 selection:text-black">
@@ -823,6 +826,12 @@ export default function App() {
         onClose={() => setIsPermissionsModalOpen(false)}
         permissions={androidPermissions}
         onUpdatePermissions={setAndroidPermissions}
+      />
+
+      {/* GitHub Automated Export & Push Modal */}
+      <GitHubExportModal
+        isOpen={isGitHubModalOpen}
+        onClose={() => setIsGitHubModalOpen(false)}
       />
 
       </div>

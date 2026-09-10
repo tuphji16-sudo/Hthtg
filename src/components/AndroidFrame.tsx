@@ -11,7 +11,8 @@ import {
   ShieldCheck,
   ChevronLeft,
   Circle,
-  Square
+  Square,
+  GitBranch
 } from 'lucide-react';
 
 interface AndroidFrameProps {
@@ -19,6 +20,7 @@ interface AndroidFrameProps {
   onLockScreen: () => void;
   onOpenProModal: () => void;
   onOpenAPKModal: () => void;
+  onOpenGitHubModal?: () => void;
   quantumEnabled?: boolean;
 }
 
@@ -27,6 +29,7 @@ export const AndroidFrame: React.FC<AndroidFrameProps> = ({
   onLockScreen,
   onOpenProModal,
   onOpenAPKModal,
+  onOpenGitHubModal,
   quantumEnabled = true,
 }) => {
   const [deviceMode, setDeviceMode] = useState<'phone' | 'full'>('phone');
@@ -84,8 +87,22 @@ export const AndroidFrame: React.FC<AndroidFrameProps> = ({
             className="flex items-center gap-1 px-2.5 py-1 rounded-xl bg-neutral-900 hover:bg-neutral-800 text-neutral-300 border border-neutral-800 transition-colors cursor-pointer"
           >
             <Download className="w-3.5 h-3.5 text-emerald-400" />
-            <span className="hidden sm:inline">تثبيت / تنزيل APK</span>
+            <span className="hidden sm:inline">تثبيت APK</span>
           </button>
+
+          {onOpenGitHubModal && (
+            <button
+              onClick={() => {
+                triggerHaptic();
+                onOpenGitHubModal();
+              }}
+              className="flex items-center gap-1 px-2.5 py-1 rounded-xl bg-[#24292e] hover:bg-[#2f363d] text-white border border-neutral-700 transition-colors cursor-pointer"
+              title="تصدير ومزامنة GitHub التلقائية"
+            >
+              <GitBranch className="w-3.5 h-3.5 text-emerald-400" />
+              <span className="hidden sm:inline">تلقائي على GitHub</span>
+            </button>
+          )}
 
           <button
             onClick={() => {
